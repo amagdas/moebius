@@ -166,7 +166,7 @@ defmodule Moebius.Database do
 
         %Moebius.QueryCommand{conn: conn, sql:
         """
-        create table if not exists #{cmd.table_name}(
+        create table if not exists #{cmd.table_name} (
           id serial primary key not null,
           body jsonb not null,
           search tsvector,
